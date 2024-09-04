@@ -16,7 +16,7 @@ def new_(*args):
             k.append(j)
         elif isinstance(j, str):
             k.append(len(j))
-        elif isinstance(j, tuple|list):
+        elif isinstance(j, (tuple, list)):
             new_(*j)
         elif isinstance(j, dict):
             new_1(**j)
@@ -37,7 +37,7 @@ def calculate_structure_sum(*args):
     for i in args:
         if isinstance(i, dict):
             new_1(**i)
-        elif isinstance(i, tuple|list):
+        elif isinstance(i, (tuple, list)):
             new_(*i)
         elif isinstance(i, str):
             k.append(len(i))
